@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Aragonite</title>
@@ -52,13 +52,13 @@
                     This is an example of using custom events for navigation. Also it shows how you can customise
                     widths and inherit option from tablet to mobile.
 
-                    <a href="javascript:void(0)" class="how-square-button">MORE DEMOS</a>
+                    <!--<a href="javascript:void(0)" class="how-square-button">MORE DEMOS</a>-->
                 </p>
 
-                <form class="how-form" action="#">
-                    <input type="text" value="" placeholder="Type an Email address" />
-                    <input type="text" value="" placeholder="Type any string" />
-                    <input type="text" value="" placeholder="Type a phone number" />
+                <form id="demo-form" class="how-form" action="#">
+                    <input type="text" value="" data-type="email" placeholder="Type an Email address" />
+                    <input type="text" value="" data-type="string" placeholder="Type any string" />
+                    <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
                 </form>
             </div>
 
@@ -66,10 +66,10 @@
 
 <pre class="hidden-xs">
 <code class="language-markup">
-&lt;form class="how-form" action="#">
-        &lt;input type="text" value="" placeholder="Type an Email address" />
-    &lt;input type="text" value="" placeholder="Type any string" />
-    &lt;input type="text" value="" placeholder="Type a phone number" />
+&lt;form id="demo-form" class="how-form" action="#">
+        &lt;input type="text" data-type="email" placeholder="Type an Email address" />
+    &lt;input type="text" data-type="string" placeholder="Type any string" />
+    &lt;input type="text" data-type="phone" placeholder="Type a phone number" />
 &lt;/form>
 </code>
 </pre>
@@ -77,8 +77,9 @@
             <div class="code col-lg-4">
 <pre class="hidden-xs">
 <code class="language-css">
-p{
-    color:red;
+.required{
+    border:thin solid @light-red !important; 
+    background:#FCF0F0 !important;
 }
 </code>
 </pre>
@@ -86,7 +87,9 @@ p{
             <div class="code col-lg-4">
 <pre class="hidden-xs">
 <code class="language-javascript">
-var a = 'test';
+&lt;script type="text/javascript">
+    aragonite.init('demo-form');
+&lt;/script>
 </code>
 </pre>
             </div>
@@ -146,6 +149,8 @@ var a = 'test';
     <script src="js/jquery.slimscroll.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script src="js/prism.js"></script>
+    <script src="js/aragonite.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#main-navigation, #logo').hide();
@@ -171,6 +176,7 @@ var a = 'test';
  
             $('.arrow-background').css('border-top', $(window).height() + 'px solid transparent');
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
+            aragonite.init('demo-form');
         });
     </script>
 </body>

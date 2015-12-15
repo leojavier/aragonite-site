@@ -12,6 +12,7 @@
     "jshint-stylish": "^2.1.0",
     "gulp-debug": "^2.1.2",
     "fullpage.js": "^2.7.5",
-    "font-awesome": "^4.5.0"
+    "font-awesome": "^4.5.0",
+    "aragonite-form-validator": "^1.0.3"
   }
 }
