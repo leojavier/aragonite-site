@@ -14,7 +14,7 @@
 <body>
     <nav class="hidden-xs">
         <a id="logo" href="/">ARAGONITE</a>
-        <ul id="main-navigation" >
+        <ul id="main-navigation">
             <li data-menuanchor="homepage"><a href="#homepage"><i class="fa fa-home"></i></a></li>
             <li data-menuanchor="howpage"><a href="#howpage">How to</a></li>
             <li data-menuanchor="regexpage"><a href="#regexpage">Regex List</a></li>
@@ -33,7 +33,7 @@
                         validator that helps you validate
                         any kind of data before submiting to your server.
                     </p>
-                        
+
                     <a href="https://github.com/leojavier/aragonite-validator" class="square-button download-btn" data-menuanchor="homepage">DOWNLOAD</a>
                     <a href="#howpage" class="square-button" data-menuanchor="homepage">DOCUMENTATION</a>
 
@@ -47,19 +47,32 @@
 
         <div id="how" class="section" data-anchor="howpage">
             <div class="container">
-                <h1 class="how-title"><strong class="how-title-strong">Realtime</strong>validation feedback</h1>
-                <p class="how-paragraph">
-                    This is an example of using custom events for navigation. Also it shows how you can customise
-                    widths and inherit option from tablet to mobile.
+                <div class="code col-lg-8">
+                    <h1 class="how-title"><strong class="how-title-strong">Realtime</strong>validation feedback</h1>
+                    <p class="how-paragraph">
+                        This example shows a basic implementation. While the user types, Aragonite
+                        runs a sanitation process on the client side to make sure all the fields ar filled correctly.
+                    </p>
+                    <form id="demo-form" class="how-form" action="#">
+                        <input type="text" value="" data-type="email" placeholder="Type an Email address" />
+                        <input type="text" value="" data-type="string" placeholder="Type any string" />
+                        <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
+                    </form>
+                </div>
+                <div class="instruction code col-lg-4 hidden-xs">
 
-                    <!--<a href="javascript:void(0)" class="how-square-button">MORE DEMOS</a>-->
-                </p>
+                    <p class="how-paragraph">
+                        If the field is invalid it will add a class called <strong>".required"</strong>
+                        to the HTML element. You customize that class and comunicate to the user that something is wrong with their inputs.
+                    </p>
+                    <p class="how-paragraph">
+                        By the time the user finished filling the form, if there is a field with the class required, it will return false
+                        preventing the user from submiting wrong data or data-types.
 
-                <form id="demo-form" class="how-form" action="#">
-                    <input type="text" value="" data-type="email" placeholder="Type an Email address" />
-                    <input type="text" value="" data-type="string" placeholder="Type any string" />
-                    <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
-                </form>
+                        <!--<a href="javascript:void(0)" class="how-square-button">MORE DEMOS</a>-->
+                    </p>
+                </div>
+
             </div>
 
             <div class="code col-lg-4">
@@ -173,11 +186,12 @@
                 e.preventDefault();
                 $(this).tab('show');
             });
- 
+
             $('.arrow-background').css('border-top', $(window).height() + 'px solid transparent');
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
             aragonite.init('demo-form');
         });
     </script>
 </body>
+
 </html>
