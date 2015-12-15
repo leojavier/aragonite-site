@@ -1,4 +1,4 @@
-﻿@import "variables.less";
+@import "variables.less";
 
 html, body {
     height: 100%;
@@ -52,7 +52,7 @@ pre {
     color: @light-gray;
     border: thin solid @line-color;
     background: @bg;
-    display: block;
+    display: inline-block;
     padding: 10px 20px;
     font-weight: 300;
     margin: 2em auto;
@@ -139,6 +139,18 @@ nav {
     p {
         max-width: 400px;
         margin: auto;
+    }
+}
+
+.download-btn {
+    background: @light-red;
+    color: #FFF;
+    border: thin solid @light-red;
+
+    &:hover {
+        background: transparent;
+        color: @light-red;
+        border: thin solid @light-red;
     }
 }
 
@@ -288,9 +300,10 @@ nav {
 }
 
 @media only screen and (max-width: 480px) {
-    nav{
-        padding:15px;
+    nav {
+        padding: 15px;
     }
+
     #faq {
         h2 {
             font-size: 1em;
