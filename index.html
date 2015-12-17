@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Aragonite</title>
@@ -10,6 +10,16 @@
     <link href="css/jquery.fullPage.css" rel="stylesheet" />
     <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="css/prism.css" rel="stylesheet" />
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71540223-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
     <nav class="hidden-xs">
@@ -38,8 +48,8 @@
                     <a href="#howpage" class="square-button" data-menuanchor="homepage">DOCUMENTATION</a>
 
                     <p>
-                        <i>Estimated size</i> <strong> 1 kb</strong> minified & gzipped. <br />
-                        <a href="#">Github  /  v1.3.2  /</a> <a href="#">Changelog</a>
+                        <i>Estimated size</i> <strong> 1.03 kb</strong> minified & gzipped. <br />
+                        <a href="https://github.com/leojavier/aragonite-validator">Github  /  v1.0.9  /</a> <a href="#">Changelog</a>
                     </p>
                 </div>
             </div>
@@ -57,6 +67,7 @@
                         <input type="text" value="" data-type="email" placeholder="Type an Email address" />
                         <input type="text" value="" data-type="string" placeholder="Type any string" />
                         <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
+                        <input type="text" value="" data-type="customCVV" placeholder="Type a phone number" />
                     </form>
                 </div>
                 <div class="instruction code col-lg-4 hidden-xs">
@@ -189,7 +200,12 @@
 
             $('.arrow-background').css('border-top', $(window).height() + 'px solid transparent');
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
-            aragonite.init('demo-form');
+            aragonite.init('demo-form', {
+                regex: [
+                    { name: 'customCVV', regex: /^[0-9]{3,4}/ },
+                    { name: 'customString', regex: 'Leo Javier' }
+                ]
+            });
         });
     </script>
 </body>
