@@ -1,8 +1,6 @@
 /*jslint node: true */
 var aragonite = (function () {
     //'use strict';
-
-    var me = this;
     var form = null;
 
     var Regex = {
@@ -216,7 +214,7 @@ var aragonite = (function () {
         };
     }
 })();
-
+ 
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     module.exports = aragonite;
 }
