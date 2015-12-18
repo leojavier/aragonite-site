@@ -58,6 +58,26 @@ pre {
   text-decoration: none;
   font-weight: 300;
 }
+.bugfix-label {
+  background: #5D9D08;
+  color: #FFF;
+  padding: 2px 8px;
+  font-size: 0.6em;
+  font-weight: 500;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.enhancement-label {
+  background: #e01b6a;
+  color: #FFF;
+  padding: 2px 8px;
+  font-size: 0.6em;
+  font-weight: 500;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 nav {
   padding: 2em;
   width: 100%;
