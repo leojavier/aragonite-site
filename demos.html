@@ -27,26 +27,21 @@
     </nav>
     <div id="aragonite">
 
-        <div id="home" class="section" data-anchor="homepage">
-            <div class="home-container">
-                <div class="container">
-                    <h1>Aragonite</h1>
-
-                    <p>
-                        A free lightweight and onobstrusive field
-                        validator that helps you validate
-                        any kind of data before submiting to your server.
-                    </p>
-
-                    <a href="https://github.com/leojavier/aragonite-validator" class="square-button download-btn" data-menuanchor="homepage">DOWNLOAD</a>
-                    <a href="#howpage" class="square-button" data-menuanchor="homepage">DOCUMENTATION</a>
-
-                    <p>
-                        <i>Estimated size</i> <strong> 1.03 kb</strong> minified & gzipped. <br />
-                        <a href="https://github.com/leojavier/aragonite-validator">Github  /  v1.0.10  /</a>
-                        <span data-menuanchor="changelog"><a href="#changelogpage">Changelog</a></span>
-                    </p>
-                </div>
+        <div id="demo" class="section" data-anchor="homepage">
+            <div class="container">
+                <h1 class="demo-title"><strong class="how-title-strong">Realtime</strong>validation feedback</h1>
+                <p class="how-paragraph">
+                    This example shows a basic implementation. While the user types, Aragonite
+                    runs a sanitation process on the client side to make sure all the fields ar filled correctly.<br />
+                    
+                </p>
+                <form id="email-demo" action="#">
+                    <div class="aragonite-text-group">
+                        <input class="aragonite-input" type="text" data-type="email" placeholder="leojavier@aragonite.com" />
+                        <label class="aragonite-label">Email Address</label>
+                        <button href="javascript:void(0)" class="how-square-button aragonite-square-button">SHOW ME THE CODE ;)</button>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -119,84 +114,6 @@
             </div>
         </div>
 
-        <div id="regex" class="section" data-anchor="regexpage">
-            <h1 class="regex-title">
-                <strong class="how-title-strong">A custom and constantly growing </strong>
-                Collection of regular expressions
-            </h1>
-            <p class="regex-paragraph">
-                This is an example of using custom events for navigation. Also it shows how you can customise widths and inherit option from tablet to mobile.
-            </p>
-
-            <div class="arrow-background"></div>
-        </div>
-
-        <div id="faq" class="section" data-anchor="regexpage">
-            <h1 class="faq-title">
-                FAQ
-            </h1>
-            <div class="container">
-                <h2>Can i use it for free?</h2>
-                <p class="faq-paragraph">
-                    Yes!  <strong>Aragonite</strong> is an opensource project authored by <a href="#">Leo Javier</a>
-                    and released under an <a href="#">MIT license.</a>
-                </p>
-
-                <h2>Can i ask for a new functionality?</h2>
-                <p class="faq-paragraph">
-                    Yes, you can submit a ticket through Github at any time.
-                    You are welcome to contact me via <a href="#">Email</a> or <a href="#">Twitter</a> for suggestions.
-                </p>
-
-                <h2>What's new in latest release?</h2>
-                <p class="faq-paragraph">
-                    Please take a look of the <a href="#">Changelog.</a>
-                </p>
-
-                <h2>need to validate a field but the pattern doesn’t exist in the regex list?</h2>
-                <p class="faq-paragraph">
-                    Please post a question on stackoverflow and tag it as <a href="#">#aragonite.</a>  The right answer will be added to the
-                    <strong>Regex</strong> List so anyone including yourself can use it again in the future.
-                </p>
-
-                <!--<h2>Compatibility?</h2>
-                <p class="faq-paragraph">
-                </p>-->
-
-            </div>
-        </div>
-
-        <div id="changelog" class="section" data-anchor="changelogpage">
-            <h1 class="faq-title">
-                Changelog
-            </h1>
-            <div class="container">
-                <h2>V1.0.8</h2>
-                <p class="changelog-paragraph">
-                    <ul class="changelog-list">
-                        <li>Adding Continuous Integration</li>
-                        <li>Implementing Browser testing</li>
-                        <li>Adding regular expressions for Credit cards</li>
-                    </ul>
-                </p>
-
-                <h2>V1.0.9</h2>
-                <p class="changelog-paragraph">
-                    <ul class="changelog-list">
-                        <li>Adding support for custom regular Expressions</li>
-                    </ul>
-                </p>
-
-                <h2>V1.0.10</h2>
-                <p class="changelog-paragraph">
-                    <ul class="changelog-list">
-                        <li>Refactoring code</li>
-                    </ul>
-                </p>
-
-            </div>
-        </div>
-
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -234,12 +151,17 @@
 
             $('.arrow-background').css('border-top', $(window).height() + 'px solid transparent');
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
-            aragonite.init('demo-form', {
+
+           var a = aragonite.init('demo-form', {
                 regex: [
                     { name: 'customCVV', regex: /^[0-9]{3,4}/ },
                     { name: 'customString', regex: 'Leo Javier' }
                 ]
             });
+
+           var b = aragonite.init('email-demo', {
+               className : 'testing'
+           });
         });
     </script>
     <script>

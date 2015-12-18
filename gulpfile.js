@@ -21,5 +21,5 @@ gulp.task('jshint', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['css/**/*.less', 'js/**/*.js'], ['less', 'jshint'])
+    gulp.watch(['css/**/*.less', 'js/**/*.js'], ['less'])
 });

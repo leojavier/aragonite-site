@@ -79,6 +79,17 @@ nav {
 #main-navigation a:hover {
   text-decoration: none;
 }
+#nav-toggle {
+  border: thin solid #00b3d9;
+  background: #FFF;
+  padding: 12px 25px;
+  top: 15px;
+  position: relative;
+  border-radius: 25px;
+}
+#nav-toggle:hover {
+  background: #00b3d9 !important;
+}
 #aragonite {
   display: block;
   width: 100%;
@@ -127,8 +138,8 @@ nav {
 .how-title {
   font-weight: 300;
   display: block;
-  margin: auto;
-  max-width: 450px;
+  /*margin: auto;
+    max-width: 450px;*/
 }
 .how-square-button {
   color: #e8e9ea;
@@ -160,9 +171,9 @@ nav {
 .how-paragraph {
   font-weight: 300;
   display: block;
-  margin: auto;
-  margin-bottom: 1em;
-  max-width: 450px;
+  /*margin: auto;
+    margin-bottom: 1em;
+    max-width: 450px;*/
   color: #777777;
 }
 .instruction {
@@ -172,7 +183,6 @@ nav {
   font-style: italic;
 }
 .how-form {
-  max-width: 450px;
   display: block;
   margin: auto;
 }
@@ -256,6 +266,91 @@ nav {
   max-width: 600px;
   position: relative;
   z-index: 2;
+}
+.changelog-title {
+  font-weight: 300;
+  display: block;
+  text-align: center !important;
+  position: relative;
+  z-index: 2;
+}
+.changelog-paragraph {
+  color: #e8e9ea;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+.changelog-list {
+  color: #e8e9ea;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+#demo {
+  width: 100%;
+  height: 100%;
+  background: url('../images/basic.jpg') no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+#demo p {
+  max-width: 500px;
+  font-weight: 500;
+}
+.demo-title {
+  font-weight: 300;
+  display: block;
+  color: #FFF;
+}
+.demo-title strong {
+  color: #ff2b39;
+}
+.aragonite-text-group {
+  background: #FFF;
+  max-width: 500px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 5px;
+  position: relative;
+}
+.aragonite-square-button {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 16px 20px;
+  background: #ff1221;
+  font-size: 0.9em;
+}
+.aragonite-square-button:hover {
+  background: #f70010;
+  color: #FFF;
+  border: thin solid #FFF;
+}
+.aragonite-label {
+  display: block;
+  padding-left: 5px;
+  color: #222;
+  margin-bottom: 0;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 20px;
+}
+.aragonite-input {
+  width: 100%;
+  border: none;
+  font-size: 0.9em;
+  padding-left: 5px;
+  color: #2c2c2c;
+  outline: 0;
+  border-bottom-left-radius: 4px;
+  padding-bottom: 2px;
+  position: relative;
+  top: 20px;
+}
+.aragonite-input:focus ~ .aragonite-label {
+  color: #CCC !important;
+  transition: color 0.5s;
 }
 @media only screen and (max-width: 480px) {
   nav {
