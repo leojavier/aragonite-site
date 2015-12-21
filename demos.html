@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,400italic' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/jquery.fullPage.css" rel="stylesheet" />
     <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="css/prism.css" rel="stylesheet" />
+    <link href="css/demo-style.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="hidden-xs">
-        <a id="logo" href="/">ARAGONITE</a>
+        <!--<a id="logo" href="/">ARAGONITE</a>-->
         <ul id="main-navigation">
-            <li data-menuanchor="homepage"><a href="#homepage"><i class="fa fa-home"></i></a></li>
-            <li data-menuanchor="howpage"><a href="#howpage">How to</a></li>
-            <li data-menuanchor="regexpage"><a href="#regexpage">Regex List</a></li>
-            <li data-menuanchor="faqpage"><a href="#faqpage">FAQ</a></li>
-            <li data-menuanchor="changelog"><a href="#changelogpage">Changelog</a></li>
+            <li data-menuanchor="homepage"><a href="index.html"><i class="fa fa-home"></i></a></li>
+            <li data-menuanchor="howpage"><a href="index.html#howpage">How to</a></li>
+            <li data-menuanchor="regexpage"><a href="index.html#regexpage">Regex List</a></li>
+            <li data-menuanchor="faqpage"><a href="index.html#faqpage">FAQ</a></li>
+            <li data-menuanchor="changelog"><a href="index.html#changelogpage">Changelog</a></li>
         </ul>
     </nav>
     <nav class="mobile hidden-md hidden-lg">
@@ -27,32 +26,33 @@
     </nav>
     <div id="aragonite">
 
-        <div id="demo" class="section" data-anchor="homepage">
+        <!--<div id="demo" class="section" data-anchor="homepage">
+
             <div class="container">
                 <h1 class="demo-title"><strong class="how-title-strong">Realtime</strong>validation feedback</h1>
                 <p class="how-paragraph">
                     This example shows a basic implementation. While the user types, Aragonite
                     runs a sanitation process on the client side to make sure all the fields ar filled correctly.<br />
-                    
+
                 </p>
                 <form id="email-demo" action="#">
                     <div class="aragonite-text-group">
-                        <input class="aragonite-input" type="text" data-type="email" placeholder="leojavier@aragonite.com" />
-                        <label class="aragonite-label">Email Address</label>
+                        <input name="email" class="aragonite-input" type="text" data-type="email" placeholder="leojavier@aragonite.com" />
+                        <label data-label="email" class="aragonite-label">Email Address</label>
                         <button href="javascript:void(0)" class="how-square-button aragonite-square-button">SHOW ME THE CODE ;)</button>
                     </div>
                 </form>
+
             </div>
-        </div>
+        </div>-->
 
         <div id="how" class="section" data-anchor="howpage">
             <div class="container">
                 <div class="code col-lg-8">
-                    <h1 class="how-title"><strong class="how-title-strong">Realtime</strong>validation feedback</h1>
+                    <h1 class="how-title"><strong class="how-title-strong">Basic implementation</strong>Realtime validation feedback</h1>
                     <p class="how-paragraph">
                         This example shows a basic implementation. While the user types, Aragonite
                         runs a sanitation process on the client side to make sure all the fields ar filled correctly.<br />
-                        <a href="javascript:void(0)" class="how-square-button">MORE DEMOS</a>
                     </p>
 
 
@@ -81,10 +81,29 @@
                 </div>
 
             </div>
-            <div class="code col-lg-4">
 
-<pre class="hidden-xs">
-<code class="language-markup">
+            <div class="container">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">javaScript</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">HTML</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">CSS</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <pre>
+                        <code class="language-javascript">
+&lt;script type="text/javascript">
+    aragonite.init('demo-form');
+&lt;/script>
+</code>
+</pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <pre>
+                        <code class="language-markup">
 &lt;form id="demo-form" class="how-form" action="#">
         &lt;input type="text" data-type="email" placeholder="Type an Email address" />
     &lt;input type="text" data-type="string" placeholder="Type any string" />
@@ -92,9 +111,10 @@
 &lt;/form>
 </code>
 </pre>
-            </div>
-            <div class="code col-lg-4">
-<pre class="hidden-xs">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+
+                        <pre>
 <code class="language-css">
 .required{
     border:thin solid @light-red !important; 
@@ -102,15 +122,167 @@
 }
 </code>
 </pre>
+                    </div>
+                </div>
             </div>
-            <div class="code col-lg-4">
-<pre class="hidden-xs">
-<code class="language-javascript">
+        </div>
+
+        <div class="how section" data-anchor="howpage">
+            <div class="container">
+                <div class="code col-lg-8">
+                    <h1 class="how-title"><strong class="how-title-strong">Custom</strong>CSS ClassName</h1>
+                    <p class="how-paragraph">
+                        By default Aragonite will add a class attribute to your HTML field when something is wrong.
+                        This className is call 'required'. However... you might have another CSS class already using
+                        that name in your project. If that's the case... you can always overwrite Aragonite's default behavior and pass a custom class name.   <br />
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-lg-6">
+                    <form id="demo-form-custom" class="how-form" action="#">
+                        <input type="text" value="" data-type="email" placeholder="Type an Email address" />
+                        <input type="text" value="" data-type="string" placeholder="Type any string" />
+                        <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
+                        <!-- <input type="text" value="" data-type="customCVV" placeholder="Type a phone number" /> -->
+                    </form>
+                </div>
+
+                <div class="code col-lg-6 hidden-xs">
+                    <p class="how-paragraph">
+                        If the field is invalid it will add a class called <strong>".customClass"</strong>
+                        to the HTML element. You customize that class and comunicate to the user that something is wrong with their inputs.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#custom-home" aria-controls="home" role="tab" data-toggle="tab">javaScript</a></li>
+                    <li role="presentation"><a href="#custom-profile" aria-controls="custom-profile" role="tab" data-toggle="tab">HTML</a></li>
+                    <li role="presentation"><a href="#custom-messages" aria-controls="custom-messages" role="tab" data-toggle="tab">CSS</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="custom-home">
+                        <pre>
+                        <code class="language-javascript">
+//className
 &lt;script type="text/javascript">
-    aragonite.init('demo-form');
+    aragonite.init('demo-form', {
+        className: 'myCustomClass'
+    });
 &lt;/script>
 </code>
+    </pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="custom-profile">
+                        <pre>
+                        <code class="language-markup">
+&lt;form id="demo-form" class="how-form" action="#">
+    &lt;input type="text" value="" data-type="email" placeholder="Type an Email address" />
+    &lt;input type="text" value="" data-type="string" placeholder="Type any string" />
+    &lt;input type="text" value="" data-type="phone" placeholder="Type a phone number" />
+&lt;/form>
+    </code>
 </pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="custom-messages">
+
+                        <pre>
+<code class="language-css">
+    .customClass{
+    border: thin solid @light-red !important;
+    background: @light-red  !important;
+    color:#FFF;
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="how section" data-anchor="howpage">
+            <div class="container">
+                <div class="code col-lg-8">
+                    <h1 class="how-title"><strong class="how-title-strong">Custom</strong>Validation</h1>
+                    <p class="how-paragraph">
+                        This demo shows a set of options available to validate your forms. I will be adding more options "every week".
+                        In case you need to use a custom validation you can always pass it as an argument and then use it on your form.<br />
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-lg-6">
+                    <form id="demo-form-custom-validation" class="how-form" action="#">
+                        <input type="text" data-type="capital" placeholder="Type any string that start with an uppercase letter" />
+                        <input type="text" data-type="seven" placeholder="Max 7 chars" />
+                    </form>
+                </div>
+
+                <div class="code col-lg-6 hidden-xs">
+                    <p class="how-paragraph">
+                        You pass the property name of these regex through your data-type attribute and Aragonite will do the rest for you. You can pass as many regex as you want*.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#custom-home-validator" aria-controls="home" role="tab" data-toggle="tab">javaScript</a></li>
+                    <li role="presentation"><a href="#custom-profile-validator" aria-controls="custom-profile" role="tab" data-toggle="tab">HTML</a></li>
+                    <li role="presentation"><a href="#custom-messages-validator" aria-controls="custom-messages" role="tab" data-toggle="tab">CSS</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="custom-home-validator">
+                        <pre>
+                        <code class="language-javascript">
+//className
+                            &lt;script type="text/javascript">
+    aragonite.init('demo-form', {
+    regex: [
+        { name: 'capital', regex: /^[A-Z][a-z0-9_-]{3,19}$/ }, //Will be valid only if the first character is UPPERCASE
+        { name: 'seven', regex: /^[a-zA-Z]{7}$/ }  // Will be valid only if the length of the string is 7 characters
+    ]
+    });
+&lt;/script>
+</code>
+    </pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="custom-profile-validator">
+                        <pre>
+                        <code class="language-markup">
+&lt;form id="demo-form" class="how-form" action="#">
+    &lt;input type="text" data-type="capital" placeholder="Type any string" />
+    &lt;input type="text" data-type="seven" placeholder="Type a phone number" />
+&lt;/form>
+    </code>
+</pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="custom-messages-validator">
+
+                        <pre>
+<code class="language-css">
+.required{
+    border:thin solid @light-red !important; 
+    background:#FCF0F0 !important;
+}
+</code>
+</pre>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -127,41 +299,28 @@
         $(document).ready(function () {
             $('#how .test').css('max-height', $(window).height());
 
-            $('#main-navigation, #logo').hide();
-
-            $('#aragonite').fullpage({
-                anchors: ['homepage', 'howpage', 'regexpage', 'faqpage', 'changelogpage'],
-                css3: true,
-                scrollingSpeed: 1000,
-                //normalScrollElements: '#how',
-                menu: '#main-navigation',
-                afterLoad: function (anchorLink, index) {
-                    if (index > 1) {
-                        $('#main-navigation, #logo').show();
-                    } else {
-                        $('#main-navigation, #logo').hide();
-                    }
-                }
-            });
-
-            $('#myTab a').click(function (e) {
-                e.preventDefault();
-                $(this).tab('show');
-            });
 
             $('.arrow-background').css('border-top', $(window).height() + 'px solid transparent');
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
 
-           var a = aragonite.init('demo-form', {
+            var a = aragonite.init('demo-form', {
                 regex: [
                     { name: 'customCVV', regex: /^[0-9]{3,4}/ },
                     { name: 'customString', regex: 'Leo Javier' }
                 ]
             });
 
-           var b = aragonite.init('email-demo', {
-               className : 'testing'
-           });
+            var b = aragonite.init('demo-form-custom', {
+                className: 'customClass'
+            });
+
+            var c = aragonite.init('demo-form-custom-validation', {
+                regex: [
+                    { name: 'capital', regex: /^[A-Z][a-z0-9_-]{3,19}$/ }, //Will be valid only if the first character is UPPERCASE
+                    { name: 'seven', regex: /^[a-zA-Z]{7}$/ }  // Will be valid only if the length of the string is 7 characters
+                ]
+        });
+
         });
     </script>
     <script>
@@ -175,5 +334,7 @@
 
     </script>
 </body>
+
+
 
 </html>

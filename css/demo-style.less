@@ -3,7 +3,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    background: @dark-green;
+    background: #FFF;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
@@ -72,7 +72,7 @@ pre {
     .square-button-mix();
 }
 
-.bugfix-label{
+.bugfix-label {
     background: #5D9D08;
     color: #FFF;
     padding: 2px 8px;
@@ -82,7 +82,8 @@ pre {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.enhancement-label{
+
+.enhancement-label {
     background: @pink;
     color: #FFF;
     padding: 2px 8px;
@@ -144,47 +145,6 @@ nav {
     height: 100%;
 }
 
-//----------------
-// Home section
-//----------------
-
-#logo {
-    font-size: @font-xl;
-    color: @light-blue;
-    text-transform: uppercase;
-    font-weight: 300;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-#home {
-    width: 100%;
-    height: 100%;
-}
-
-.home-container {
-    display: block;
-    text-align: center;
-
-    p {
-        max-width: 400px;
-        margin: auto;
-    }
-}
-
-.download-btn {
-    background: @light-red;
-    color: #FFF;
-    border: thin solid @light-red;
-
-    &:hover {
-        background: transparent;
-        color: @light-red;
-        border: thin solid @light-red;
-    }
-}
 
 //----------------
 // How section
@@ -195,7 +155,13 @@ nav {
     background: #FCF0F0 !important;
 }
 
-#how {
+.customClass{
+    border: thin solid @light-red !important;
+    background: @light-red  !important;
+    color:#FFF !important;
+}
+
+.how {
     background: #FFF;
     width: 100%;
     height: 100%;
@@ -204,8 +170,7 @@ nav {
 .how-title {
     font-weight: 300;
     display: block;
-    /*margin: auto;
-    max-width: 450px;*/
+    padding-top:100px;
 }
 
 .how-square-button {
@@ -266,113 +231,6 @@ nav {
 }
 
 //----------------
-// Regex section
-//----------------
-
-#regex {
-    background: #FFF;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.regex-title {
-    font-weight: 300;
-    display: block;
-    margin-left: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.regex-paragraph {
-    color: @dark-gray;
-    max-width: 450px;
-    margin-left: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-.arrow-background {
-    width: 0;
-    height: 0;
-    border-top: 60px solid transparent;
-    border-bottom: 0 solid transparent;
-    border-right: 60px solid @dark-green;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-
-//----------------
-// FAQ section
-//----------------
-
-#faq {
-    background: @dark-green;
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    strong {
-        color: #FFF;
-        font-weight: 300;
-    }
-
-    a {
-        color: @light-red;
-        font-weight: bold;
-    }
-
-    h2 {
-        text-align: left;
-        font-weight: 300;
-        margin-top: 1.5em;
-        font-size: @font-xl;
-    }
-}
-
-.faq-title {
-    font-weight: 300;
-    display: block;
-    text-align: center !important;
-    position: relative;
-    z-index: 2;
-}
-
-.faq-paragraph {
-    color: @light-gray;
-    max-width: 600px;
-    position: relative;
-    z-index: 2;
-}
-
-
-//----------------
-// Changelog section
-//----------------
-
-.changelog-title {
-    font-weight: 300;
-    display: block;
-    text-align: center !important;
-    position: relative;
-    z-index: 2;
-}
-
-.changelog-paragraph {
-    color: @light-gray;
-    max-width: 600px;
-    position: relative;
-    z-index: 2;
-}
-
-.changelog-list {
-    color: @light-gray;
-    font-size: 0.9em;
-    font-weight: 300;
-}
-//----------------
 // demo section
 //----------------
 #demo {
@@ -430,8 +288,8 @@ nav {
     color: #222;
     margin-bottom: 0;
     font-size: 0.9em;
-    position:relative;
-    bottom:20px;
+    position: relative;
+    bottom: 20px;
 }
 
 .aragonite-input {
@@ -443,18 +301,19 @@ nav {
     outline: 0;
     border-bottom-left-radius: 4px;
     padding-bottom: 2px;
-    position:relative;
-    top:20px;
+    position: relative;
+    top: 20px;
 }
 
 .aragonite-input:focus ~ .aragonite-label {
     color: #CCC !important;
-    transition:color 0.5s;
+    transition: color 0.5s;
 }
 
 ul.nav.nav-tabs {
     margin-top: 3em;
 }
+
 .tab-content {
     margin-top: -39px;
 }
@@ -462,16 +321,12 @@ ul.nav.nav-tabs {
 pre[class*="language-"] {
     background: #FFF;
 }
+
 @media only screen and (max-width: 480px) {
     nav {
         padding: 15px;
     }
-
-    #faq {
-        h2 {
-            font-size: 1em;
-            line-height: 1.6em;
-            font-weight: 500;
-        }
+    .how-title {
+        padding-top:60px;
     }
 }

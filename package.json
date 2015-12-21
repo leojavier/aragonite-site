@@ -14,5 +14,14 @@
     "fullpage.js": "^2.7.5",
     "font-awesome": "^4.5.0",
     "aragonite-form-validator": "^1.0.3"
+  },
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/leojavier/aragonite-validator/tree/master/dist/js",
+    "basePath": "",
+    "files": [
+      "aragonite.min.js",
+      "aragonite.min.js.gz"
+    ]
   }
 }

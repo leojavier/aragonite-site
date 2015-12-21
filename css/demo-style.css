@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: #12171a;
+  background: #FFF;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
 }
@@ -114,42 +114,16 @@ nav {
   width: 100%;
   height: 100%;
 }
-#logo {
-  font-size: 1.6em;
-  color: #00b3d9;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-#logo:hover {
-  text-decoration: none;
-}
-#home {
-  width: 100%;
-  height: 100%;
-}
-.home-container {
-  display: block;
-  text-align: center;
-}
-.home-container p {
-  max-width: 400px;
-  margin: auto;
-}
-.download-btn {
-  background: #ff4551;
-  color: #FFF;
-  border: thin solid #ff4551;
-}
-.download-btn:hover {
-  background: transparent;
-  color: #ff4551;
-  border: thin solid #ff4551;
-}
 .required {
   border: thin solid #ff4551 !important;
   background: #FCF0F0 !important;
 }
-#how {
+.customClass {
+  border: thin solid #ff4551 !important;
+  background: #ff4551 !important;
+  color: #FFF !important;
+}
+.how {
   background: #FFF;
   width: 100%;
   height: 100%;
@@ -157,8 +131,7 @@ nav {
 .how-title {
   font-weight: 300;
   display: block;
-  /*margin: auto;
-    max-width: 450px;*/
+  padding-top: 100px;
 }
 .how-square-button {
   color: #e8e9ea;
@@ -222,87 +195,6 @@ nav {
 .how-title-strong {
   color: #00b3d9;
   display: block;
-}
-#regex {
-  background: #FFF;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.regex-title {
-  font-weight: 300;
-  display: block;
-  margin-left: 20px;
-  position: relative;
-  z-index: 2;
-}
-.regex-paragraph {
-  color: #777777;
-  max-width: 450px;
-  margin-left: 20px;
-  position: relative;
-  z-index: 2;
-}
-.arrow-background {
-  width: 0;
-  height: 0;
-  border-top: 60px solid transparent;
-  border-bottom: 0 solid transparent;
-  border-right: 60px solid #12171a;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-#faq {
-  background: #12171a;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-#faq strong {
-  color: #FFF;
-  font-weight: 300;
-}
-#faq a {
-  color: #ff4551;
-  font-weight: bold;
-}
-#faq h2 {
-  text-align: left;
-  font-weight: 300;
-  margin-top: 1.5em;
-  font-size: 1.6em;
-}
-.faq-title {
-  font-weight: 300;
-  display: block;
-  text-align: center !important;
-  position: relative;
-  z-index: 2;
-}
-.faq-paragraph {
-  color: #e8e9ea;
-  max-width: 600px;
-  position: relative;
-  z-index: 2;
-}
-.changelog-title {
-  font-weight: 300;
-  display: block;
-  text-align: center !important;
-  position: relative;
-  z-index: 2;
-}
-.changelog-paragraph {
-  color: #e8e9ea;
-  max-width: 600px;
-  position: relative;
-  z-index: 2;
-}
-.changelog-list {
-  color: #e8e9ea;
-  font-size: 0.9em;
-  font-weight: 300;
 }
 #demo {
   width: 100%;
@@ -384,9 +276,7 @@ pre[class*="language-"] {
   nav {
     padding: 15px;
   }
-  #faq h2 {
-    font-size: 1em;
-    line-height: 1.6em;
-    font-weight: 500;
+  .how-title {
+    padding-top: 60px;
   }
 }
