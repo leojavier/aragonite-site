@@ -61,10 +61,9 @@
             <div class="container">
                 <div class="col-lg-6">
                     <form id="demo-form" class="how-form" action="#">
-                        <input type="text" value="" data-type="email" placeholder="Type an Email address" />
-                        <input type="text" value="" data-type="string" placeholder="Type any string" />
-                        <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
-                        <!-- <input type="text" value="" data-type="customCVV" placeholder="Type a phone number" /> -->
+                        <input type="text" name="email" value="" data-type="email" placeholder="Type an Email address" />
+                        <input type="text" name="string" value="" data-type="string" placeholder="Type any string" />
+                        <input type="text" name="phone" value="" data-type="phone" placeholder="Type a phone number" />
                     </form>
                 </div>
 
@@ -127,6 +126,99 @@
             </div>
         </div>
 
+        <div id="how" class="section" data-anchor="howpage">
+            <div class="container">
+                <div class="code col-lg-8">
+                    <h1 class="how-title"><strong class="how-title-strong">Custom</strong>Validation Messages</h1>
+                    <p class="how-paragraph">
+                        This example shows how to wire custom messages with each of your fields<br />
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-lg-6">
+                    <form id="demo-form-custom-labels" class="how-form" action="#">
+                        <label for="email">E-mail</label>
+                        <label for="email-error" class="aragonite-error-message"></label>
+                        <input type="text" name="email" value="" data-type="email" placeholder="Type an Email address" />
+                        <label for="string">First name</label>
+                        <label for="string-error" class="aragonite-error-message"></label>
+                        <input type="text" name="string" value="" data-type="string" placeholder="Type any string" />
+                        <label for="phone">Phone number</label>
+                        <label for="phone-error" class="aragonite-error-message"></label>
+                        <input type="text" name="phone" value="" data-type="phone" placeholder="Type a phone number" />
+                    </form>
+                </div>
+
+                <div class="code col-lg-6 hidden-xs">
+                    <p class="how-paragraph">
+                        If the field is invalid it will add a class called <strong>".required"</strong>
+                        to the HTML element. You customize that class and comunicate to the user that something is wrong with their inputs.
+                    </p>
+
+                    <p class="how-paragraph">
+                        By the time the user finished filling the form, if there is a field with the class required, it will return false
+                        preventing the user from submiting wrong data or data-types.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home-messages" aria-controls="home" role="tab" data-toggle="tab">javaScript</a></li>
+                    <li role="presentation"><a href="#profile-messages" aria-controls="profile" role="tab" data-toggle="tab">HTML</a></li>
+                    <li role="presentation"><a href="#messages-messages" aria-controls="messages" role="tab" data-toggle="tab">CSS</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home-messages">
+                        <pre>
+                        <code class="language-javascript">
+&lt;script type="text/javascript">
+    aragonite.init('demo-form', {
+        messages: true
+    });
+&lt;/script>
+</code>
+</pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile-messages">
+                        <pre>
+                        <code class="language-markup">
+&lt;form id="demo-form-custom-labels" class="how-form" action="#">
+    &lt;label for="email">E-mail&lt;/label>
+    &lt;label for="email-error" class="aragonite-error-message">&lt;/label>
+    &lt;input type="text" name="email" value="" data-type="email" placeholder="Type an Email address" />
+    &lt;label for="string">First name&lt;/label>
+    &lt;label for="string-error" class="aragonite-error-message">&lt;/label>
+    &lt;input type="text" name="string" value="" data-type="string" placeholder="Type any string" />
+    &lt;label for="phone">Phone number&lt;/label>
+    &lt;label for="phone-error" class="aragonite-error-message">&lt;/label>
+    &lt;input type="text" name="phone" value="" data-type="phone" placeholder="Type a phone number" />
+&lt;/form>
+</code>
+</pre>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages-messages">
+
+                        <pre>
+<code class="language-css">
+.required{
+    border:thin solid @light-red !important; 
+    background:#FCF0F0 !important;
+}
+</code>
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="how section" data-anchor="howpage">
             <div class="container">
                 <div class="code col-lg-8">
@@ -143,10 +235,12 @@
             <div class="container">
                 <div class="col-lg-6">
                     <form id="demo-form-custom" class="how-form" action="#">
-                        <input type="text" value="" data-type="email" placeholder="Type an Email address" />
-                        <input type="text" value="" data-type="string" placeholder="Type any string" />
-                        <input type="text" value="" data-type="phone" placeholder="Type a phone number" />
-                        <!-- <input type="text" value="" data-type="customCVV" placeholder="Type a phone number" /> -->
+                        <label for="email"></label>
+                        <input type="text" name="email" value="" data-type="email" placeholder="Type an Email address" />
+                        <label for="string"></label>
+                        <input type="text" name="string" value="" data-type="string" placeholder="Type any string" />
+                        <label for="phone"></label>
+                        <input type="text" name="phone" value="" data-type="phone" placeholder="Type a phone number" />
                     </form>
                 </div>
 
@@ -223,8 +317,10 @@
             <div class="container">
                 <div class="col-lg-6">
                     <form id="demo-form-custom-validation" class="how-form" action="#">
-                        <input type="text" data-type="capital" placeholder="Type any string that start with an uppercase letter" />
-                        <input type="text" data-type="seven" placeholder="Max 7 chars" />
+                        <label for="upercase"></label>
+                        <input type="text" name="upercase" data-type="customCVV" placeholder="Type any string that start with an uppercase letter" />
+                        <label for="customString"></label>
+                        <input type="text" name="customString" data-type="customString" placeholder="Max 7 chars" />
                     </form>
                 </div>
 
@@ -250,12 +346,24 @@
                         <pre>
                         <code class="language-javascript">
 //className
-                            &lt;script type="text/javascript">
+&lt;script type="text/javascript">
     aragonite.init('demo-form', {
-    regex: [
-        { name: 'capital', regex: /^[A-Z][a-z0-9_-]{3,19}$/ }, //Will be valid only if the first character is UPPERCASE
-        { name: 'seven', regex: /^[a-zA-Z]{7}$/ }  // Will be valid only if the length of the string is 7 characters
-    ]
+        regex: [
+                {
+                    name: 'customCVV',
+                    regex: {
+                        value: /^[A-Z][a-z0-9_-]{3,19}$/,
+                        message: 'This custom CVV number is wrong'
+                    }
+                },
+                {
+                    name: 'customString',
+                    regex: {
+                        value: /^[a-zA-Z]{7}$/,
+                        message: 'Another error'
+                    }
+                }
+        ]
     });
 &lt;/script>
 </code>
@@ -265,8 +373,8 @@
                         <pre>
                         <code class="language-markup">
 &lt;form id="demo-form" class="how-form" action="#">
-    &lt;input type="text" data-type="capital" placeholder="Type any string" />
-    &lt;input type="text" data-type="seven" placeholder="Type a phone number" />
+    &lt;input type="text" data-type="customCVV" placeholder="Type any string" />
+    &lt;input type="text" data-type="customString" placeholder="Type a phone number" />
 &lt;/form>
     </code>
 </pre>
@@ -303,11 +411,10 @@
             $('.arrow-background').css('border-top', $(window).height() + 'px solid transparent');
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
 
-            var a = aragonite.init('demo-form', {
-                regex: [
-                    { name: 'customCVV', regex: /^[0-9]{3,4}/ },
-                    { name: 'customString', regex: 'Leo Javier' }
-                ]
+            var a = aragonite.init('demo-form');
+
+            var a = aragonite.init('demo-form-custom-labels', {
+                messages: true
             });
 
             var b = aragonite.init('demo-form-custom', {
@@ -316,10 +423,22 @@
 
             var c = aragonite.init('demo-form-custom-validation', {
                 regex: [
-                    { name: 'capital', regex: /^[A-Z][a-z0-9_-]{3,19}$/ }, //Will be valid only if the first character is UPPERCASE
-                    { name: 'seven', regex: /^[a-zA-Z]{7}$/ }  // Will be valid only if the length of the string is 7 characters
+                {
+                    name: 'customCVV',
+                    regex: {
+                        value: /^[A-Z][a-z0-9_-]{3,19}$/,
+                        message: 'This custom CVV number is wrong'
+                    }
+                },
+                {
+                    name: 'customString',
+                    regex: {
+                        value: /^[a-zA-Z]{7}$/,
+                        message: 'Another error'
+                    }
+                }
                 ]
-        });
+            });
 
         });
     </script>

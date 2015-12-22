@@ -43,7 +43,7 @@
 
                     <p>
                         <i>Estimated size</i> <strong> 1.06 kb</strong> minified & gzipped. <br />
-                        <a href="https://github.com/leojavier/aragonite-validator">Github  /  v1.1.1  /</a>
+                        <a href="https://github.com/leojavier/aragonite-validator">Github  /  v1.1.2  /</a>
                         <span data-menuanchor="changelog"><a href="#changelogpage">Changelog</a></span>
                     </p>
                 </div>
@@ -252,8 +252,20 @@
             $('.arrow-background').css('border-right', $(window).width() + 'px solid #12171a');
             aragonite.init('demo-form', {
                 regex: [
-                    { name: 'customCVV', regex: /^[0-9]{3,4}/ },
-                    { name: 'customString', regex: 'Leo Javier' }
+                    {
+                        name: 'customCVV',
+                        regex: {
+                            value: /^[0-9]{3,4}/,
+                            message: 'a message'
+                        }
+                    },
+                    {
+                        name: 'customString',
+                        regex: {
+                            value: /^[0-9]{3,4}/,
+                            message: 'a message'
+                        }
+                    }
                 ]
             });
 
